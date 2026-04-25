@@ -18,7 +18,7 @@
   --border:rgba(255,255,255,.10);
 }
 
-*{ box-sizing:border-box; }
+*{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -160,11 +160,10 @@ footer a{
   <h1>Giveaway Shuffle</h1>
 
   <p class="subtitle">
-    A Discord giveaway bot built for scheduled closings, delayed drawings,
-    live updates, manual entries, and fair winner selection.
+    A powerful Discord giveaway bot built for scheduled closings,
+    delayed drawings, bulk entries, live updates, and fair winner selection.
   </p>
 
-  <!-- Main CTA Button -->
   <div>
     <a href="https://discord.com/discovery/applications/1495426545370792087"
        target="_blank"
@@ -174,12 +173,10 @@ footer a{
     </a>
   </div>
 
-  <!-- Secondary Buttons -->
   <div class="buttons">
     <a href="#commands" class="btn secondary">Commands</a>
-
+    <a href="updates.html" class="btn secondary">Updates</a>
     <a href="privacy.html" class="btn secondary">Privacy Policy</a>
-
     <a href="terms.html" class="btn secondary">Terms of Service</a>
 
     <a href="https://ko-fi.com/giveawayshuffle"
@@ -204,8 +201,8 @@ footer a{
   <h2>Welcome</h2>
   <p>
     Giveaway Shuffle was created for communities that need more control than
-    basic reaction-entry bots. Hosts can control closing times, drawing times,
-    custom entries, and live contest updates.
+    basic reaction-entry bots. Hosts can control entry closing times,
+    drawing times, contestant management, bulk imports, and live contest updates.
   </p>
 </section>
 
@@ -216,93 +213,73 @@ footer a{
 
     <div class="card">
       <h3>Manual Entries</h3>
-      <p>Add custom names and custom ticket counts.</p>
+      <p>Add contestants and custom ticket counts instantly.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bulk Importing</h3>
+      <p>Add multiple contestants at once using /sbulk.</p>
     </div>
 
     <div class="card">
       <h3>Scheduled Closing</h3>
-      <p>Automatically stop new entries at a chosen time.</p>
+      <p>Automatically stop entries at your chosen time.</p>
     </div>
 
     <div class="card">
       <h3>Delayed Drawings</h3>
-      <p>Draw winners immediately or later at a scheduled reveal time.</p>
+      <p>Close now, draw winners later for live reveals.</p>
     </div>
 
     <div class="card">
       <h3>Live Updates</h3>
-      <p>Giveaway posts refresh with current totals and entries.</p>
+      <p>Giveaway posts refresh with totals and entries.</p>
     </div>
 
     <div class="card">
-      <h3>Fair Odds</h3>
-      <p>More tickets improves advancement odds.</p>
+      <h3>Time Editing</h3>
+      <p>Adjust giveaway closing and draw times anytime.</p>
+    </div>
+
+    <div class="card">
+      <h3>Contestant Removal</h3>
+      <p>Remove entrants and entries with /sremove.</p>
     </div>
 
     <div class="card">
       <h3>Multi-Server Ready</h3>
-      <p>Supports multiple Discord communities.</p>
+      <p>Safe server-separated giveaways and data.</p>
     </div>
 
   </div>
 </section>
 
 <section class="card">
-  <h2>How Giveaway Shuffle Works</h2>
+  <h2>Fair Drawing System</h2>
 
   <p>
-    Giveaway Shuffle uses a two-stage drawing system designed to reward
-    higher entry counts while keeping the final reveal exciting and fair.
+    Giveaway Shuffle uses a two-stage system that rewards more entries
+    while keeping the final reveal exciting.
   </p>
-
-  <h3>Stage 1: Ticket Pool Selection</h3>
-
-  <p>Every entry acts as its own ticket.</p>
 
   <ul>
-    <li>Blue = 5 tickets</li>
-    <li>Red = 3 tickets</li>
-    <li>Green = 2 tickets</li>
-  </ul>
-
-  <p>
-    The more tickets a contestant has, the better their odds of reaching
-    the Top 10 finalists.
-  </p>
-
-  <h3>Stage 2: Top 10 Finalist Round</h3>
-
-  <p>
-    Once the Top 10 finalists are selected, each finalist is represented
-    only once regardless of how many original tickets they had.
-  </p>
-
-  <p>
-    The final elimination round is then based on equal single-entry odds
-    for all Top 10 finalists.
-  </p>
-
-  <h3>Why This System?</h3>
-
-  <ul>
-    <li>More entries matter during the first stage.</li>
-    <li>Finalists all get an equal shot to win.</li>
-    <li>Creates suspense and fairness.</li>
+    <li>Every entry becomes a ticket.</li>
+    <li>More tickets improve Top 10 finalist odds.</li>
+    <li>Finalists then compete evenly in the last round.</li>
+    <li>Winner reveal happens live with suspense eliminations.</li>
   </ul>
 </section>
 
 <section class="card">
-  <h2>Closing & Drawing Times</h2>
-
-  <p>
-    Giveaway Shuffle allows separate control for entry closing time and
-    winner drawing time.
-  </p>
+  <h2>Perfect For</h2>
 
   <ul>
-    <li>Close entries and draw immediately</li>
-    <li>Close entries first, draw later</li>
-    <li>Perfect for live streams and scheduled reveals</li>
+    <li>Discord communities</li>
+    <li>Streamers</li>
+    <li>Gaming clans</li>
+    <li>Live events</li>
+    <li>Merch giveaways</li>
+    <li>VIP reward contests</li>
   </ul>
 </section>
 
@@ -310,10 +287,17 @@ footer a{
   <h2>Commands</h2>
 
   <div class="command"><strong>/screate</strong><br>Create a new giveaway.</div>
-  <div class="command"><strong>/sentry</strong><br>Add entries to a giveaway.</div>
-  <div class="command"><strong>/sdesc</strong><br>Update giveaway description.</div>
-  <div class="command"><strong>/sdelete</strong><br>Delete a giveaway.</div>
-  <div class="command"><strong>/shelp</strong><br>Show available commands.</div>
+  <div class="command"><strong>/sdesc</strong><br>Edit giveaway description.</div>
+  <div class="command"><strong>/sentry</strong><br>Add entries manually.</div>
+  <div class="command"><strong>/sbulk</strong><br>Bulk add multiple contestants + entries.</div>
+  <div class="command"><strong>/sremove</strong><br>Remove a contestant and all entries.</div>
+  <div class="command"><strong>/stime</strong><br>Adjust close and drawing times.</div>
+  <div class="command"><strong>/sclose</strong><br>Close entries immediately.</div>
+  <div class="command"><strong>/sdraw</strong><br>Draw winner(s) now.</div>
+  <div class="command"><strong>/slist</strong><br>View current entries privately.</div>
+  <div class="command"><strong>/srefresh</strong><br>Refresh giveaway post.</div>
+  <div class="command"><strong>/sdelete</strong><br>Delete finished giveaway.</div>
+  <div class="command"><strong>/shelp</strong><br>Show help menu.</div>
 </section>
 
 <section class="card">
@@ -321,7 +305,7 @@ footer a{
 
   <p>
     Giveaway Shuffle is operated by <strong>Black Wolf Union</strong>.
-    Official resources may be hosted through the GitHub account
+    Official resources may also be hosted through the GitHub account
     <strong>lowridertk84</strong>.
   </p>
 </section>
@@ -331,6 +315,7 @@ footer a{
 <footer>
   <p>© 2026 Giveaway Shuffle</p>
   <p>
+    <a href="updates.html">Updates</a> |
     <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms of Service</a>
   </p>
