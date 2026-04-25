@@ -1,360 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giveaway Shuffle</title>
-  <style>
-    :root {
-      --bg: #0d1020;
-      --card: #171b34;
-      --card2: #20264a;
-      --text: #f5f7ff;
-      --muted: #b8c0e0;
-      --accent: #8b5cf6;
-      --accent2: #facc15;
-      --danger: #ff6b6b;
-      --border: rgba(255,255,255,0.12);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giveaway Shuffle</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+:root{
+  --bg:#0d1020;
+  --card:#171b34;
+  --card2:#222950;
+  --text:#f4f6ff;
+  --muted:#b8c0e0;
+  --accent:#8b5cf6;
+  --gold:#facc15;
+  --border:rgba(255,255,255,.10);
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(139, 92, 246, 0.3), transparent 35%),
-        radial-gradient(circle at top right, rgba(250, 204, 21, 0.18), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    header {
-      padding: 70px 20px 50px;
-      text-align: center;
-    }
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(139,92,246,.25), transparent 35%),
+    radial-gradient(circle at top right, rgba(250,204,21,.15), transparent 30%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
 
-    .logo {
-      width: 130px;
-      height: 130px;
-      border-radius: 28px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 35px rgba(139, 92, 246, 0.5);
-    }
+header{
+  text-align:center;
+  padding:70px 20px 40px;
+}
 
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: var(--accent2);
-    }
+.logo{
+  width:130px;
+  height:130px;
+  border-radius:28px;
+  box-shadow:0 0 35px rgba(139,92,246,.45);
+  margin-bottom:18px;
+}
 
-    .subtitle {
-      max-width: 720px;
-      margin: 18px auto 28px;
-      color: var(--muted);
-      font-size: 1.15rem;
-    }
+h1{
+  margin:0;
+  font-size:3rem;
+  color:var(--gold);
+}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
+.subtitle{
+  max-width:760px;
+  margin:18px auto 28px;
+  color:var(--muted);
+  font-size:1.1rem;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text);
-      background: var(--accent);
-      font-weight: bold;
-      border: 1px solid transparent;
-    }
+.buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
 
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid var(--border);
-    }
+.btn{
+  text-decoration:none;
+  color:#fff;
+  background:var(--accent);
+  padding:13px 20px;
+  border-radius:12px;
+  font-weight:bold;
+}
 
-    .container {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.btn.secondary{
+  background:transparent;
+  border:1px solid var(--border);
+}
 
-    section {
-      margin-bottom: 35px;
-    }
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:20px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
 
-    .card {
-      background: linear-gradient(180deg, var(--card), var(--card2));
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
 
-    h2 {
-      color: var(--accent2);
-      margin-top: 0;
-      font-size: 1.8rem;
-    }
+h2{
+  margin-top:0;
+  color:var(--gold);
+}
 
-    h3 {
-      margin-top: 0;
-      color: #ffffff;
-    }
+h3{
+  margin-bottom:8px;
+}
 
-    code {
-      background: rgba(255,255,255,0.1);
-      padding: 3px 7px;
-      border-radius: 6px;
-      color: #fff;
-    }
+ul{
+  padding-left:22px;
+}
 
-    ul {
-      padding-left: 22px;
-    }
+.command{
+  padding:14px;
+  border-radius:12px;
+  background:rgba(255,255,255,.06);
+  margin-bottom:10px;
+}
 
-    .command {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      padding: 14px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.06);
-      margin-bottom: 10px;
-    }
+.command strong{
+  color:var(--gold);
+}
 
-    .command strong {
-      color: var(--accent2);
-    }
+footer{
+  text-align:center;
+  padding:35px 20px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  margin-top:40px;
+}
 
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 35px 20px;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: var(--accent2);
-    }
-
-    .notice {
-      border-left: 4px solid var(--accent2);
-    }
-  </style>
+footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <!-- Replace icon.png with your uploaded bot icon file name if different -->
-    <img src="icon.png" alt="Giveaway Shuffle Logo" class="logo" />
 
-    <h1>Giveaway Shuffle</h1>
-    <p class="subtitle">
-      A Discord giveaway bot built for manual entries, scheduled closings,
-      delayed drawings, live updates, and fair shuffled ticket-pool winner selection.
-    </p>
+<header>
+  <img src="icon.png" alt="Giveaway Shuffle Logo" class="logo">
 
-    <div class="buttons">
-      <a class="btn" href="#commands">View Commands</a>
-      <a class="btn secondary" href="#privacy">Privacy Policy</a>
-      <a class="btn secondary" href="#terms">Terms of Service</a>
+  <h1>Giveaway Shuffle</h1>
+
+  <p class="subtitle">
+    A Discord giveaway bot built for scheduled closings, delayed drawings,
+    live updates, manual entries, and fair winner selection.
+  </p>
+
+  <div class="buttons">
+    <a href="#commands" class="btn">Commands</a>
+    <a href="privacy.html" class="btn secondary">Privacy Policy</a>
+    <a href="terms.html" class="btn secondary">Terms of Service</a>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="card">
+  <h2>Welcome</h2>
+  <p>
+    Giveaway Shuffle was created for communities that need more control than
+    basic reaction-entry bots. Hosts can control closing times, drawing times,
+    custom entries, and live contest updates.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Features</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Manual Entries</h3>
+      <p>Add custom names and custom ticket counts.</p>
     </div>
-  </header>
 
-  <main class="container">
-    <section class="card notice">
-      <h2>Initial Release</h2>
-      <p>
-        Giveaway Shuffle is currently in its initial release. Features may be improved,
-        adjusted, or expanded over time as the bot continues to grow.
-      </p>
-    </section>
+    <div class="card">
+      <h3>Scheduled Closing</h3>
+      <p>Automatically stop new entries at a chosen time.</p>
+    </div>
 
-    <section>
-      <h2>What Giveaway Shuffle Does</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Manual Entries</h3>
-          <p>Add contestants manually and assign each person a custom number of entries.</p>
-        </div>
+    <div class="card">
+      <h3>Delayed Drawings</h3>
+      <p>Draw winners immediately or later at a scheduled reveal time.</p>
+    </div>
 
-        <div class="card">
-          <h3>Scheduled Closing</h3>
-          <p>Set when entries close so no new entries are accepted after the deadline.</p>
-        </div>
+    <div class="card">
+      <h3>Live Updates</h3>
+      <p>Giveaway posts refresh with current totals and entries.</p>
+    </div>
 
-        <div class="card">
-          <h3>Delayed Drawings</h3>
-          <p>Draw immediately when entries close, or schedule the drawing for a later time.</p>
-        </div>
+    <div class="card">
+      <h3>Fair Odds</h3>
+      <p>More tickets improves advancement odds.</p>
+    </div>
 
-        <div class="card">
-          <h3>Live Updates</h3>
-          <p>The giveaway post updates with current contestants and entry totals.</p>
-        </div>
+    <div class="card">
+      <h3>Multi-Server Ready</h3>
+      <p>Supports multiple Discord communities.</p>
+    </div>
 
-        <div class="card">
-          <h3>Fair Drawing</h3>
-          <p>Each entry acts as its own ticket in a shuffled ticket pool.</p>
-        </div>
+  </div>
+</section>
 
-        <div class="card">
-          <h3>Multi-Server Ready</h3>
-          <p>Giveaways are separated by server so communities do not interfere with each other.</p>
-        </div>
-      </div>
-    </section>
+<section class="card">
+  <h2>How Giveaway Shuffle Works</h2>
 
-    <section class="card">
-      <h2>How Entries Work</h2>
-      <p>
-        Each entry is treated like a separate ticket. For example:
-      </p>
-      <ul>
-        <li>Blue = 5 entries</li>
-        <li>Red = 3 entries</li>
-        <li>Green = 2 entries</li>
-      </ul>
-      <p>
-        This creates 10 total tickets in the drawing pool. The more entries someone has,
-        the better their chance, while every ticket still has a chance to win.
-      </p>
-    </section>
+  <p>
+    Giveaway Shuffle uses a two-stage drawing system designed to reward
+    higher entry counts while keeping the final reveal exciting and fair.
+  </p>
 
-    <section class="card">
-      <h2>Closing & Drawing Times</h2>
-      <p>
-        Giveaway Shuffle separates the entry closing time from the actual drawing time.
-      </p>
-      <ul>
-        <li>Entries can close and draw immediately.</li>
-        <li>Entries can close first, then draw later.</li>
-        <li>This works well for live streams, scheduled events, and delayed reveal drawings.</li>
-      </ul>
-    </section>
+  <h3>Stage 1: Ticket Pool Selection</h3>
 
-    <section id="commands" class="card">
-      <h2>Commands</h2>
+  <p>
+    Every entry acts as its own ticket.
+  </p>
 
-      <div class="command">
-        <strong>/screate</strong>
-        <span>Create a new giveaway using a popup form.</span>
-      </div>
+  <ul>
+    <li>Blue = 5 tickets</li>
+    <li>Red = 3 tickets</li>
+    <li>Green = 2 tickets</li>
+  </ul>
 
-      <div class="command">
-        <strong>/sentry</strong>
-        <span>Add entries to an active giveaway.</span>
-      </div>
+  <p>
+    The more tickets a contestant has, the better their odds of reaching
+    the Top 10 finalists.
+  </p>
 
-      <div class="command">
-        <strong>/sdesc</strong>
-        <span>Add or update the giveaway description.</span>
-      </div>
+  <h3>Stage 2: Top 10 Finalist Round</h3>
 
-      <div class="command">
-        <strong>/sclose</strong>
-        <span>Close a giveaway manually.</span>
-      </div>
+  <p>
+    Once the Top 10 finalists are selected, each finalist is represented
+    only once regardless of how many original tickets they had.
+  </p>
 
-      <div class="command">
-        <strong>/sdraw</strong>
-        <span>Draw winner(s) manually.</span>
-      </div>
+  <p>
+    The final elimination round is then based on equal single-entry odds
+    for all Top 10 finalists.
+  </p>
 
-      <div class="command">
-        <strong>/slist</strong>
-        <span>View current entries privately.</span>
-      </div>
+  <h3>Why This System?</h3>
 
-      <div class="command">
-        <strong>/srefresh</strong>
-        <span>Refresh the public giveaway post.</span>
-      </div>
+  <ul>
+    <li>More entries matter during the first stage.</li>
+    <li>Finalists all get an equal shot to win.</li>
+    <li>Creates suspense and fairness.</li>
+  </ul>
+</section>
 
-      <div class="command">
-        <strong>/sdelete</strong>
-        <span>Delete a finished giveaway.</span>
-      </div>
+<section class="card">
+  <h2>Closing & Drawing Times</h2>
 
-      <div class="command">
-        <strong>/shelp</strong>
-        <span>Show the command help list.</span>
-      </div>
-    </section>
+  <p>
+    Giveaway Shuffle allows separate control for entry closing time and
+    winner drawing time.
+  </p>
 
-    <section id="privacy" class="card">
-      <h2>Privacy Policy</h2>
-      <p>
-        Giveaway Shuffle only stores the information needed to operate giveaways.
-        This may include Discord server IDs, channel IDs, giveaway names, contestant names,
-        entry counts, winner information, and timing details.
-      </p>
-      <p>
-        Giveaway Shuffle does not collect passwords, payment information, private messages,
-        or unnecessary personal data.
-      </p>
-      <p>
-        Stored giveaway data is used only to run contests, update giveaway posts,
-        and select winners.
-      </p>
-      <p>
-        Server administrators may request removal of stored giveaway data by contacting
-        the bot operator.
-      </p>
-    </section>
+  <ul>
+    <li>Close entries and draw immediately</li>
+    <li>Close entries first, draw later</li>
+    <li>Perfect for live streams and scheduled reveals</li>
+  </ul>
+</section>
 
-    <section id="terms" class="card">
-      <h2>Terms of Service</h2>
-      <p>
-        By using Giveaway Shuffle, you agree to use the bot responsibly and follow
-        Discord’s Terms of Service, Community Guidelines, and all applicable laws.
-      </p>
-      <p>
-        Giveaway Shuffle is provided as-is. While the bot is designed to be fair and reliable,
-        no guarantee is made that it will be error-free or available at all times.
-      </p>
-      <p>
-        Server owners and giveaway hosts are responsible for managing their own giveaway rules,
-        prizes, eligibility, and fulfillment.
-      </p>
-      <p>
-        Abuse, spam, misuse, or attempts to exploit the bot may result in access being removed.
-      </p>
-    </section>
+<section class="card" id="commands">
+  <h2>Commands</h2>
 
-    <section class="card">
-      <h2>Operator</h2>
-      <p>
-        Giveaway Shuffle is operated by <strong>Black Wolf Union</strong>.
-        Project resources and policy pages may be hosted through the GitHub account
-        <strong>lowridertk84</strong>.
-      </p>
-    </section>
-  </main>
+  <div class="command">
+    <strong>/screate</strong><br>
+    Create a new giveaway.
+  </div>
 
-  <footer>
-    <p>© 2026 Giveaway Shuffle. Operated by Black Wolf Union.</p>
-    <p>
-      <a href="#privacy">Privacy Policy</a> |
-      <a href="#terms">Terms of Service</a>
-    </p>
-  </footer>
+  <div class="command">
+    <strong>/sentry</strong><br>
+    Add entries to a giveaway.
+  </div>
+
+  <div class="command">
+    <strong>/sdesc</strong><br>
+    Update giveaway description.
+  </div>
+
+  <div class="command">
+    <strong>/sdelete</strong><br>
+    Delete a giveaway.
+  </div>
+
+  <div class="command">
+    <strong>/shelp</strong><br>
+    Show available commands.
+  </div>
+</section>
+
+<section class="card">
+  <h2>Support Giveaway Shuffle</h2>
+
+  <p>
+    Giveaway Shuffle is community supported. Donations help with hosting,
+    development time, testing, and future upgrades.
+  </p>
+
+  <p>
+    The bot is free to use. Donations are optional and appreciated.
+  </p>
+
+  <a href="https://ko-fi.com/YOURNAME" target="_blank" class="btn">
+    Support on Ko-fi
+  </a>
+</section>
+
+<section class="card">
+  <h2>Operator</h2>
+
+  <p>
+    Giveaway Shuffle is operated by <strong>Black Wolf Union</strong>.
+    Official resources may be hosted through the GitHub account
+    <strong>lowridertk84</strong>.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Giveaway Shuffle</p>
+  <p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</footer>
+
 </body>
 </html>
