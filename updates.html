@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giveaway Shuffle Updates</title>
+
+<style>
+:root{
+  --bg:#0d1020;
+  --card:#171b34;
+  --card2:#222950;
+  --text:#f4f6ff;
+  --muted:#b8c0e0;
+  --accent:#8b5cf6;
+  --gold:#facc15;
+  --green:#22c55e;
+  --border:rgba(255,255,255,.10);
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(139,92,246,.25), transparent 35%),
+    radial-gradient(circle at top right, rgba(250,204,21,.15), transparent 30%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+header{
+  text-align:center;
+  padding:60px 20px 30px;
+}
+
+h1{
+  margin:0;
+  font-size:2.8rem;
+  color:var(--gold);
+}
+
+.subtitle{
+  color:var(--muted);
+  max-width:760px;
+  margin:16px auto 0;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
+}
+
+.btn{
+  text-decoration:none;
+  color:#fff;
+  background:var(--accent);
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+.btn.secondary{
+  background:transparent;
+  border:1px solid var(--border);
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px;
+}
+
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.version{
+  color:var(--gold);
+  margin-top:0;
+}
+
+.date{
+  color:var(--muted);
+  font-size:.95rem;
+  margin-bottom:18px;
+}
+
+.tag{
+  display:inline-block;
+  background:rgba(34,197,94,.18);
+  color:#86efac;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:.85rem;
+  margin-bottom:14px;
+}
+
+ul{
+  padding-left:22px;
+}
+
+footer{
+  text-align:center;
+  padding:35px 20px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  margin-top:40px;
+}
+
+footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Giveaway Shuffle Updates</h1>
+
+  <p class="subtitle">
+    Follow the development history, new features, improvements, and future plans for Giveaway Shuffle.
+  </p>
+
+  <div class="buttons">
+    <a href="index.html" class="btn">Home</a>
+    <a href="https://discord.gg/cUeJzVDKYy" target="_blank" class="btn secondary">Join Discord</a>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- VERSION 2 -->
+<section class="card">
+  <div class="tag">Latest Release</div>
+  <h2 class="version">Version 2.0</h2>
+  <div class="date">April 2026</div>
+
+  <h3>Major New Features</h3>
+  <ul>
+    <li><strong>/sbulk</strong> — Bulk add multiple contestants and entries in one command.</li>
+    <li><strong>/sremove</strong> — Remove a contestant and all of their entries instantly.</li>
+    <li><strong>/stime</strong> — Edit closing and drawing times without rebuilding the giveaway.</li>
+  </ul>
+
+  <h3>System Improvements</h3>
+  <ul>
+    <li>Improved command reliability and interaction handling.</li>
+    <li>Cleaner production deployment workflow.</li>
+    <li>Better per-server giveaway isolation and safety.</li>
+    <li>Enhanced schedule timers and draw processing.</li>
+    <li>General stability upgrades.</li>
+  </ul>
+</section>
+
+<!-- VERSION 1 -->
+<section class="card">
+  <h2 class="version">Version 1.0</h2>
+  <div class="date">Original Release</div>
+
+  <h3>Bot Creation</h3>
+  <ul>
+    <li>Created Giveaway Shuffle for Discord communities.</li>
+    <li>Built scheduled giveaway closing system.</li>
+    <li>Added delayed drawing support for live reveals.</li>
+    <li>Manual contestant and ticket entry system.</li>
+    <li>Private host commands for management.</li>
+    <li>SQLite database for saved giveaways and entries.</li>
+    <li>Multi-server ready architecture.</li>
+  </ul>
+
+  <h3>Signature Drawing System</h3>
+  <ul>
+    <li>True shuffled ticket pool system.</li>
+    <li>Weighted Top 10 finalist selection.</li>
+    <li>Suspense elimination reveal system.</li>
+    <li>Fair final round winner selection.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Coming Soon</h2>
+
+  <ul>
+    <li>More host quality-of-life tools</li>
+    <li>Additional customization settings</li>
+    <li>Expanded statistics and reporting</li>
+    <li>Performance improvements</li>
+    <li>Future premium feature possibilities</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Giveaway Shuffle</p>
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</footer>
+
+</body>
+</html>
