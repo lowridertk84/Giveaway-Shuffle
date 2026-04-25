@@ -14,12 +14,11 @@
   --muted:#b8c0e0;
   --accent:#8b5cf6;
   --gold:#facc15;
+  --green:#22c55e;
   --border:rgba(255,255,255,.10);
 }
 
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -63,6 +62,7 @@ h1{
   justify-content:center;
   flex-wrap:wrap;
   gap:12px;
+  margin-top:18px;
 }
 
 .btn{
@@ -72,11 +72,24 @@ h1{
   padding:13px 20px;
   border-radius:12px;
   font-weight:bold;
+  display:inline-block;
 }
 
 .btn.secondary{
   background:transparent;
   border:1px solid var(--border);
+}
+
+.btn.invite{
+  background:linear-gradient(135deg,var(--gold),#eab308);
+  color:#111827;
+  font-size:1.15rem;
+  padding:16px 28px;
+  box-shadow:0 0 25px rgba(250,204,21,.35);
+}
+
+.btn.discord{
+  background:linear-gradient(135deg,#5865F2,#4752c4);
 }
 
 .container{
@@ -151,25 +164,36 @@ footer a{
     live updates, manual entries, and fair winner selection.
   </p>
 
-  <div class="buttons">
-    <a href="#commands" class="btn">Commands</a>
-
+  <!-- Main CTA Button -->
+  <div>
     <a href="https://discord.com/oauth2/authorize?client_id=1495426545370792087&permissions=2147552256&integration_type=0&scope=applications.commands+bot"
        target="_blank"
        rel="noopener"
-       class="btn secondary">
-       Invite Bot
+       class="btn invite">
+       🎉 Invite Giveaway Shuffle
     </a>
+  </div>
+
+  <!-- Secondary Buttons -->
+  <div class="buttons">
+    <a href="#commands" class="btn secondary">Commands</a>
 
     <a href="privacy.html" class="btn secondary">Privacy Policy</a>
 
     <a href="terms.html" class="btn secondary">Terms of Service</a>
 
-    <a href="https://ko-fi.com/YOURNAME"
+    <a href="https://ko-fi.com/giveawayshuffle"
        target="_blank"
        rel="noopener"
        class="btn secondary">
        Donate
+    </a>
+
+    <a href="https://discord.gg/cUeJzVDKYy"
+       target="_blank"
+       rel="noopener"
+       class="btn discord">
+       Join Discord
     </a>
   </div>
 </header>
